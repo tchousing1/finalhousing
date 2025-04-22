@@ -1,0 +1,191 @@
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+
+function Home() {
+  return (
+    <section className="text-center">
+      <div className="relative bg-cover bg-center h-[500px]" style={{ backgroundImage: "url('/hero-image.jpg')" }}>
+        <div className="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center text-white">
+          <h1 className="text-5xl font-bold mb-4">Welcome to Twin Cities Housing</h1>
+          <p className="text-xl max-w-2xl mx-auto">Supporting our community with stable housing solutions for a better tomorrow.</p>
+        </div>
+      </div>
+
+      <div className="py-20 px-6">
+        <h2 className="text-3xl font-bold mb-6 text-[#B38F4B]">Why Choose Us?</h2>
+        <p className="max-w-3xl mx-auto text-lg text-[#B38F4B]">
+          We believe everyone deserves a safe and stable place to live. Our team works hard to guide and support individuals facing housing instability by providing client-centered, compassionate care throughout the process.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function About() {
+  return (
+    <section className="text-center py-20 px-6">
+      <h1 className="text-4xl font-bold mb-6 text-[#B38F4B]">About Twin Cities Housing Support</h1>
+      <p className="max-w-3xl mx-auto text-lg text-white">
+        Twin Cities Housing Support LLC is committed to helping individuals overcome housing challenges through personalized, compassionate services. We work with clients of all backgrounds, including those with disabilities, mental health conditions, and other barriers to stable housing.
+      </p>
+      <p className="max-w-3xl mx-auto text-lg text-white mt-4">
+        Our goal is to empower our community by connecting people with safe and secure living environments. We collaborate with healthcare providers, case managers, and local housing authorities to create long-term solutions that truly make a difference.
+      </p>
+    </section>
+  );
+}
+
+function Services() {
+  return (
+    <section className="text-center py-20 px-6">
+      <h1 className="text-4xl font-bold mb-6 text-[#B38F4B]">Our Services</h1>
+      <ul className="max-w-3xl mx-auto space-y-6 text-lg text-white list-disc list-inside text-left">
+        <li><strong>Housing Consultation:</strong> Helping clients understand eligibility and develop housing-focused goals.</li>
+        <li><strong>Housing Transition Services:</strong> Assistance finding and securing safe, stable housing.</li>
+        <li><strong>Housing Sustaining Services:</strong> Ongoing support to maintain housing and prevent homelessness.</li>
+        <li><strong>Help with Community Resources:</strong> Connecting clients to essential services like food, transportation, and healthcare.What We Can Do For You
+Help you find stable housing
+Teach you how to create and stick to a budget
+Assist with applying for government benefits
+Connect you to mental health counseling or therapy
+Coordinate doctor's appointments and follow-ups
+Offer rides or set up transportation for essential errands
+Guide you through employment or job-training programs
+Help you develop a healthy daily routine
+Work with you on meal planning and grocery shopping
+Support you in medication management
+Coordinate with schools or training centers if you're pursuing education
+Provide crisis support and safety planning
+Offer stress management and relaxation techniques
+Set up access to community events or social groups
+Help you communicate with landlords or housing authorities
+Assist in maintaining personal hygiene routines
+Teach you how to manage bills and avoid late fees
+Walk you through legal aid referrals, if needed
+Offer tips for self-care and emotional wellness
+Provide resources for childcare or family services
+Help you set realistic, meaningful goals
+Collaborate with your healthcare providers for a complete care plan
+Encourage social interaction and community involvement
+Help you practice effective communication skills
+Set up in-home assistance for daily tasks
+Advocate on your behalf with agencies or service providers
+Offer support with cleaning and maintaining a safe living environment
+Teach problem-solving and conflict-resolution techniques
+Assist in navigating insurance and healthcare coverage
+Link you to financial literacy workshops
+Suggest exercise and physical wellness resources
+Provide guidance on healthy relationships and boundaries
+Coordinate volunteer opportunities if you want to give back
+Help organize your paperwork and important documents
+Offer support for sobriety or substance-use recovery programs
+Connect you with peer support groups
+Facilitate learning new hobbies or skills for personal growth
+Assist in developing coping skills for anxiety and depression
+Check in regularly to celebrate milestones and progress
+Make sure you never feel alone in your journey</li>
+      </ul>
+    </section>
+  );
+}
+
+function Testimonials() {
+  return (
+    <section className="text-center py-20 px-6">
+      <h1 className="text-4xl font-bold mb-6 text-[#B38F4B]">What Our Clients Say</h1>
+      <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+        <div className="bg-[#1e3731] p-6 rounded shadow">
+          <p className="text-lg text-white italic">"Twin Cities Housing Support helped me find a place I can truly call home. Their compassion and dedication changed my life."</p>
+          <p className="mt-4 font-bold text-[#B38F4B]">— Amina S.</p>
+        </div>
+        <div className="bg-[#1e3731] p-6 rounded shadow">
+          <p className="text-lg text-white italic">"From start to finish, the team made sure I understood the process and felt supported every step of the way."</p>
+          <p className="mt-4 font-bold text-[#B38F4B]">— Marcus T.</p>
+        </div>
+        <div className="bg-[#1e3731] p-6 rounded shadow">
+          <p className="text-lg text-white italic">"I was overwhelmed, but they helped me stay focused and hopeful. I couldn't have done this without them."</p>
+          <p className="mt-4 font-bold text-[#B38F4B]">— Sarah B.</p>
+        </div>
+        <div className="bg-[#1e3731] p-6 rounded shadow">
+          <p className="text-lg text-white italic">"Professional, kind, and responsive. I’ve already recommended them to friends and family."</p>
+          <p className="mt-4 font-bold text-[#B38F4B]">— Jamal K.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Contact() {
+  return (
+    <section className="text-center py-20 px-6">
+      <h1 className="text-4xl font-bold mb-6 text-[#B38F4B]">Contact & Referrals</h1>
+      <p className="max-w-2xl mx-auto text-lg text-white mb-10">
+        Reach out to us with any questions or referrals. We're here to support you.
+      </p>
+      <form className="max-w-xl mx-auto space-y-4 text-left">
+        <div>
+          <label className="block mb-1 text-[#B38F4B]">Full Name</label>
+          <input type="text" name="name" className="w-full p-2 rounded text-black" required />
+        </div>
+        <div>
+          <label className="block mb-1 text-[#B38F4B]">Email</label>
+          <input type="email" name="email" className="w-full p-2 rounded text-black" required />
+        </div>
+        <div>
+          <label className="block mb-1 text-[#B38F4B]">Phone Number</label>
+          <input type="tel" name="phone" className="w-full p-2 rounded text-black" required />
+        </div>
+        <div>
+          <label className="block mb-1 text-[#B38F4B]">Referral Details</label>
+          <textarea name="message" rows="5" className="w-full p-2 rounded text-black" required></textarea>
+        </div>
+        <button type="submit" className="bg-[#B38F4B] text-black px-6 py-2 rounded hover:opacity-90">
+          Submit Referral
+        </button>
+      </form>
+      <div className="mt-10 space-y-2 text-white">
+        <p><strong>Phone:</strong> 612-703-9971</p>
+        <p><strong>Email:</strong> info@twincitieshousingsupport.com</p>
+        <p><strong>Address:</strong> 150 Tyler Ave NE, Suite 149, Hopkins, MN 55343</p>
+        <p><strong>Business Hours:</strong> Mon–Fri 9am–5pm | Sat 12pm–4pm | Sun Closed</p>
+      </div>
+    </section>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <main className="bg-[#142725] text-[#B38F4B] min-h-screen font-sans">
+        <header className="p-6 flex justify-between items-center shadow-md bg-[#142725]">
+          <img src="/Twin Cities.png" alt="Twin Cities Housing Logo" className="h-12" />
+          <nav className="space-x-6 text-[#B38F4B]">
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/testimonials">Testimonials</Link>
+            <Link to="/contact">Contact / Referrals</Link>
+          </nav>
+        </header>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+
+        <footer className="bg-[#142725] py-6 text-center text-sm space-y-2">
+          <p>© {new Date().getFullYear()} Twin Cities Housing Support LLC. All rights reserved.</p>
+          <p>Business Hours: Mon–Fri 9am–5pm | Sat 12pm–4pm | Sun Closed</p>
+          <div className="flex justify-center items-center gap-4 flex-wrap">
+            <p className="flex items-center gap-2"><FaEnvelope /> info@twincitieshousingsupport.com</p>
+            <p className="flex items-center gap-2"><FaPhone /> 612-703-9971</p>
+            <p className="flex items-center gap-2"><FaMapMarkerAlt /> 150 Tyler Ave NE, Suite 149, Hopkins, MN 55343</p>
+          </div>
+        </footer>
+      </main>
+    </Router>
+  );
+}
